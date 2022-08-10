@@ -1,0 +1,29 @@
+{% extends "Libros/base.html" %}
+
+ {% block lista_libros %}
+                    
+
+    <form method="post"> {% csrf_token %}
+        <p>
+            Ingrese Titulo
+            <input type="text" name="titulo">
+        </p>
+        <p>
+            Ingrese Autor
+            <input type="text" name="autor">
+        </p>
+        <p>
+            Ingrese Precio
+            <input type="text" name="precio">
+        </p>
+        <p>
+            Ingrese Genero
+            <input type="text" name="genero">
+        </p>
+        <input type="submit" value="Cargar">
+
+
+
+    </form>
+    
+    {% endblock lista_libros %}
