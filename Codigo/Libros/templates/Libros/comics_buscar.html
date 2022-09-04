@@ -1,0 +1,17 @@
+
+{% extends "Libros/base.html" %}
+
+{%block titulo%}Buscar comics{%endblock%}
+
+{%block formulario%}
+    <div>
+        <form method="get">
+            {{formulario.as_p}}
+            <input type="submit" value="Buscar">
+    
+        </form>
+        
+    </div>
+    
+{%endblock%}
+    

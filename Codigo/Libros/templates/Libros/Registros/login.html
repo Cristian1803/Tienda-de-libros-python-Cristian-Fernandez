@@ -1,0 +1,22 @@
+{% extends "Libros/base.html" %}
+{%block titulo%}Iniciar sesion{%endblock%}
+{% block lista_libros %}
+
+
+{%if error %}
+ <p style="color:crimson"> {{error}}</p>
+{%endif%}
+
+
+<form method="POST"> {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit"> Iniciar sesion </button>
+    <br>
+
+    <a href="{%url  'registrar' %}">¿No tenes usuario?, REGISTRATE</a>
+
+</form>
+
+{%endblock%}

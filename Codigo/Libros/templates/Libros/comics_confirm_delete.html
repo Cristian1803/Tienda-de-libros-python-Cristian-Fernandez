@@ -1,0 +1,12 @@
+{% extends "Libros/base.html" %}
+{%block titulo%}Confirmar borrado{%endblock%}
+{% block lista_libros %}
+<form  method="post"> {% csrf_token %}
+    <p>Esta seguro que desea eliminar {{object}}?</p>
+    <input type="submit" value="confirmar">
+    <a href="{%url 'comics' %}">Volver</a>
+
+
+
+</form>
+{%endblock%}

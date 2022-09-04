@@ -1,0 +1,18 @@
+{% extends "Libros/base.html" %}
+{%block titulo%}Editar usuario{%endblock%}
+
+{% block lista_libros %}
+
+
+
+
+
+<form method="POST"> {%csrf_token%}
+    <p>Editando el usuario: {{request.user.username}}</p>
+    {{form.as_p}}
+
+    <input type="submit" value="Editar">
+   </form>
+
+   
+{%endblock%}

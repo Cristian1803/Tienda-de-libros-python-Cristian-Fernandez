@@ -1,0 +1,19 @@
+{% extends "Libros/base.html" %}
+{%block titulo%}Registrarse{%endblock%}
+{% block lista_libros %}
+
+
+<form method="POST"> {% csrf_token %}
+
+    {%if error %}
+    <p style="color:crimson"> {{error}}</p>
+   {%endif%}
+
+    {{form.as_p}}
+
+    <button type="submit"> Registrarse </button>
+
+</form>
+
+
+{%endblock%}
