@@ -1,7 +1,6 @@
 # Entrega del proyecto final - Python. Fernandez Blejman Cristian
 
-## instrucciones
-Biendenidxs!
+## Instrucciones
 
 Primero es necesario instalar Django utilizando el comando pip desde la terminal
 ```
@@ -15,21 +14,21 @@ Primero hay que hacer las migraciones para crear la base de datos.
 > python manage.py makemigrations
 > python manage.py migrate
 ```
-Una vez hecho esto, ya esta listo para correrse. ejecutamos:
+Una vez hecho esto, ya está listo para correrse. Ejecutamos:
 ```
 > python manage.py runserver
 ```
-El inicio de la pagina se mostrara vacio, pero una vez cargados los elementos en nuestra base de datos van a poder verse en nuestra pagina.
+El inicio de la página se mostrara vacío, pero una vez cargados los elementos en nuestra base de datos van a poder verse en nuestra página.
 
-## Como agrego elemento a la base de datos?
-pueden crear un superusuario e iniciar sesión en la pagina para agregar nuevos libros. 
-para eso hay que usar el comando:
+## ¿Cómo agrego elementos a la base de datos?
+Crear un superusuario e iniciar sesión en la página para agregar nuevos libros. 
+Para eso hay que usar el comando:
 ```
 > python manage.py createsuperuser
 ```
 
-una vez hecho eso ya pueden iniciar sesión en la pagina y empezar a cargar nuevos libros.
+Una vez hecho eso ya pueden iniciar sesión en la página y empezar a cargar nuevos libros.
 
 
-##Adjunto un video mostrando como funciona la pagina:
+## Adjunto un video mostrando como funciona la página:
 https://youtu.be/YNEONoW2kA8
