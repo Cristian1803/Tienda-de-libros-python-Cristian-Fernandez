@@ -27,11 +27,13 @@
                         
                         
                         
-                                                                    
+                                                          
                         <li class="nav-item"><a class="nav-link" href="/">inicio</a></li>
+                        {%if request.user.is_authenticated %} 
                         <li class="nav-item"><a class="nav-link" href="/mangas/">Mangas</a></li>
                         <li class="nav-item"><a class="nav-link" href="/comics/">Comics</a></li>
                         <li class="nav-item"><a class="nav-link" href="/novelas/">Novelas</a></li>
+                        {%endif%}
 
                         
 
@@ -47,23 +49,17 @@
                         {%elif request.user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href="/edit/">Editar usuario</a></li>
                         
-                        
-                        
-                        
 
                         {%endif%}
 
                         {%block buscar%}
                         {%endblock%}
-
-
-
-                        
+                       
                     </ul>
                  {%if request.user.is_authenticated %}
-                 <a class= "btn btn-danger" href="{%url 'logout' %}">Logout</a>
+                 <a class= "btn btn-danger" href="{%url 'logout' %}">salir</a>
                  {%else%}
-                 <a class= "btn btn-danger" href="{%url 'iniciar_sesion' %}">Iniciar Sesion</a>
+                 <a class= "btn btn-danger" href="{%url 'iniciar_sesion' %}">Iniciar Sesión</a>
 
                  {%endif%}
                  <a class= "btn btn-dark" href="/about_me/">Sobre mi</a>
@@ -71,7 +67,7 @@
              
             </div>
         </nav>
-        
+
         <!-- Header-->
         {%block contenido%}
 
